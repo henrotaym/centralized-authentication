@@ -13,7 +13,7 @@ const prettierFiles = (filenames) =>
   `yarn prettier --write ${getFilePaths(filenames)}`;
 
 module.exports = {
-  "**/*.{ts,tsx}": [checkFiles],
-  "**/*.{js,jsx,ts,tsx}": [lintFiles, prettierFiles],
-  "**/*.{json|md}": [prettierFiles],
+  "**/*.(ts|tsx)": [checkFiles],
+  "**/*.(js|jsx|ts|tsx)": [lintFiles, prettierFiles],
+  "**/*.(json|md)": [prettierFiles],
 };
